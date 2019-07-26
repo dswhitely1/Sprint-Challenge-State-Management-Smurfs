@@ -22,34 +22,34 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What problem does the context API help solve?
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
-- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
-- [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+- [x] What problem does the context API help solve?  Context API takes away the need to prop drill down any number of Components to get to the Component that needs to consume the data.  With Context, you can create a Context and with the Provider and Consumer, you can wrap your main App in the Provider and any child no matter for far nested can access the data by decalring the Consumer or with the `useContext` hook.
+- [x] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?  The store is the source of all truth.  The actions are the initiators of a state change.  Based on the action type, it will pass the data, aka the `payload` to the reducers.  The reducers, based on the action.type, will return a new State to the store.
+- [x] What is the difference between Application state and Component state? When would be a good time to use one over the other?  Component State is used for State that only needs to reside on the Component.  An example of Component level State will be Form Management.  Application State is state that is needed by multiple components to display data.
+- [x] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?  `redux-thunk` is a middleware that allows us to turn our Action Creators into asynchronous code.  **UPDATE**: Using the package `react-redux`, it gives us access to the `dispatch` functionality with the `useDispatch` hook.  Therefore, thunk is no longer necessary for making our action-creators asynchronous.
+- [x] What is your favorite state management system you've learned and this sprint? Please explain why! I'm still a big fan of Redux but with a change.  I prefer to use Redux with the new hooks from `react-redux` as my preferred store management system.  
 
 ## Project Set Up
 
 Follow these steps to set up your project:
 
-- [ ] `fork & clone` this repository.
-- [ ] `cd` into the forked copy of this repository.
-- [ ] **RUN** `yarn` to retrieve all `server-side` the dependencies.
-- [ ] **RUN** `yarn start` or `npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
-- [ ] After your API is up and running, you can open chrome and type in `http://localhost:3333/smurfs`. You should see an empty Array `[]` returned to you. This is an array that your **API** will be using to store our Smurf Data.
-- [ ] **LOOK** at your `smurfs` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
-- [ ] **Open** `src/index.js` to make sure that your app is ready to roll with the proper middleware.
-- [ ] **cd** into `smurfs` and run `yarn` to retrieve the client side dependencies.
-- [ ] **RUN** `yarn start` to fire up your React application. There ought to be a pretty little message awaiting you welcoming you to the app. `Follow` the prompting.
+- [x] `fork & clone` this repository.
+- [x] `cd` into the forked copy of this repository.
+- [x] **RUN** `yarn` to retrieve all `server-side` the dependencies.
+- [x] **RUN** `yarn start` or `npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
+- [x] After your API is up and running, you can open chrome and type in `http://localhost:3333/smurfs`. You should see an empty Array `[]` returned to you. This is an array that your **API** will be using to store our Smurf Data.
+- [x] **LOOK** at your `smurfs` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
+- [x] **Open** `src/index.js` to make sure that your app is ready to roll with the proper middleware.
+- [x] **cd** into `smurfs` and run `yarn` to retrieve the client side dependencies.
+- [x] **RUN** `yarn start` to fire up your React application. There ought to be a pretty little message awaiting you welcoming you to the app. `Follow` the prompting.
 
 **LOOK** at all the files you've been given for this project. One important file to note is `server.js`. This file contains an **API** that you are going to be interfacing with. Below is documentation on how to interact with the **API**.
 
 ## Minimum Viable Product
 
-- [ ] Plan and implement how you are going to manage your state for your application
-- [ ] You _must_ use either context or Redux as your state management system
-- [ ] Once you have planned out your state management system, fetch data from the smurf server
-- [ ] Add a form to collect info for a new smurf, and make a POST request to the server to add a new smurf to your village
+- [x] Plan and implement how you are going to manage your state for your application
+- [x] You _must_ use either context or Redux as your state management system
+- [x] Once you have planned out your state management system, fetch data from the smurf server
+- [x] Add a form to collect info for a new smurf, and make a POST request to the server to add a new smurf to your village
 
 ## API documentation
 
