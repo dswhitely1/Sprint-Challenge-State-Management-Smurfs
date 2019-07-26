@@ -14,7 +14,7 @@ import {
     UPDATE_SMURF_FAILURE,
     UPDATE_SMURF_START,
     UPDATE_SMURF_SUCCESS
-} from 'types';
+} from './types';
 
 
 export const useActions = () => {

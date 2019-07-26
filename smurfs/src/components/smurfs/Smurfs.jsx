@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect, useContext} from 'react';
 import {useSelector} from "react-redux";
-
+import {ActionsContext} from "../../contexts/ActionsContext";
 import Smurf from './Smurf';
 
 const Smurfs = () => {
+    const {fetchSmurf} = useContext(ActionsContext)
+    useEffect(()=>fetchSmurf(),[]);
+
     const smurfs = useSelector(state => state.smurfStore.smurfs);
     return (
         <div className="Smurfs text-center">
